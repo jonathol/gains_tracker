@@ -1,0 +1,1 @@
+gainsTracker = angular.module('gainsTracker',[])
