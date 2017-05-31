@@ -1,24 +1,12 @@
-# README
+# Gains Tracker (WIP)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+* Keep track of daily macros
 
-* Ruby version
+* Log workouts
 
-* System dependencies
+* Calculate macros
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Code Samples
