@@ -1,4 +1,4 @@
-angular.module('gainsTracker', ['ui.router'])
+angular.module('gainsTracker', ['ui.router', 'templates'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -7,7 +7,7 @@ angular.module('gainsTracker', ['ui.router'])
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: '/home.html',
+        templateUrl: 'home/_home.html',
         controller: 'MainCtrl'
       });
 
