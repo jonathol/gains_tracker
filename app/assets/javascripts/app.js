@@ -1,4 +1,9 @@
-angular.module('gainsTracker', ['ui.router', 'templates', 'ng-token-auth'])
+angular.module('gainsTracker', [
+  'ui.router',
+  'templates',
+  'ng-token-auth',
+  'ipCookie'
+])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -9,6 +14,11 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'ng-token-auth'])
         url: '/home',
         templateUrl: 'home/_home.html',
         controller: 'MainCtrl'
+      })
+      .state('register', {
+        url: '/register',
+        templateUrl: 'auth/_register.html',
+        controller: 'AuthCtrl',
       });
 
     $urlRouterProvider.otherwise('home');
