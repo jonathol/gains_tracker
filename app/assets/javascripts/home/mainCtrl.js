@@ -3,5 +3,5 @@ angular.module('gainsTracker')
   '$scope',
   '$stateParams',
   function($scope, $stateParams){
-
+  
 }]);
