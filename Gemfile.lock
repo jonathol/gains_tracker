@@ -62,7 +62,6 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    hashie (3.5.5)
     i18n (0.8.4)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
@@ -84,9 +83,6 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
-    omniauth (1.6.1)
-      hashie (>= 3.4.6, < 3.6.0)
-      rack (>= 1.6.2, < 3)
     orm_adapter (0.5.0)
     puma (3.9.0)
     rack (2.0.3)
@@ -169,7 +165,6 @@ DEPENDENCIES
   devise_token_auth
   jbuilder (~> 2.5)
   listen (~> 3.0.5)
-  omniauth
   puma (~> 3.0)
   rails (~> 5.0.3)
   sass-rails (~> 5.0)

@@ -1,4 +1,4 @@
-angular.module('gainsTracker', ['ui.router', 'templates', 'ng-token-auth'])
+angular.module('gainsTracker', ['ui.router', 'templates'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
