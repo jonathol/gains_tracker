@@ -1,4 +1,4 @@
-angular.module('gainsTracker', ['ui.router', 'templates'])
+angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
