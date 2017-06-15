@@ -1,9 +1,8 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :null_session
-
-  respond_to :json
-
+  respond_to :html, :json
+  protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
+
 
   def angular
     render 'layouts/application'
