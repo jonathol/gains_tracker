@@ -10,9 +10,9 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
         templateUrl: 'home/_home.html',
         controller: 'MainCtrl'
       })
-      .state('login', {
-        url: '/login',
-        templateUrl: 'auth/_login.html',
+      .state('signin', {
+        url: '/signin',
+        templateUrl: 'auth/_signin.html',
         controller: 'AuthCtrl',
         onEnter: ['$state', 'Auth', function($state, Auth) {
           Auth.currentUser().then(function (){
