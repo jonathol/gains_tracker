@@ -5,6 +5,7 @@ angular.module('gainsTracker')
 'Auth',
 function($scope, $state, Auth){
   $scope.signin = function() {
+    debugger
     Auth.login($scope.user).then(function(){
       $state.go('home');
     });

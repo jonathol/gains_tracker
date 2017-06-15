@@ -7,6 +7,8 @@ function($scope, Auth){
   $scope.logout = Auth.logout;
 
   Auth.currentUser().then(function (user){
+    debugger
+    console.log("hi");
     $scope.user = user;
   });
 
@@ -15,6 +17,7 @@ function($scope, Auth){
   });
 
   $scope.$on('devise:login', function (e, user){
+    debugger
     $scope.user = user;
   });
 
