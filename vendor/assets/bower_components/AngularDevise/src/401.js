@@ -2,7 +2,7 @@ devise.provider('AuthIntercept', function AuthInterceptProvider() {
     /**
      * Set to true to intercept 401 Unauthorized responses
      */
-    var interceptAuth = false;
+    var interceptAuth = true;
 
     // The interceptAuth config function
     this.interceptAuth = function(value) {

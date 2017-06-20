@@ -2,7 +2,9 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
+
   function($stateProvider, $urlRouterProvider) {
+
 
     $stateProvider
       .state('home', {
@@ -29,6 +31,11 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
             $state.go('home');
           })
         }]
+      })
+      .state('calc', {
+        url: '/calc',
+        templateUrl: 'calc/_calc.html',
+        controller: 'CalcCtrl'
       });
 
     $urlRouterProvider.otherwise('home');
