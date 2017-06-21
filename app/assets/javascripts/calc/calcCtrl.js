@@ -2,19 +2,11 @@ angular.module('gainsTracker')
 .controller('CalcCtrl', [
   '$scope',
   function($scope) {
+    $scope.units = "imperial"
+    $scope.lbm = ((100 - $scope.bfp)/100) * $scope.weight;
+    $scope.bmr = 370 + (21.6 * $scope.lbm);
     $scope.result = function() {
-      if ($scope.operator == '+') {
-        return $scope.a + $scope.b;
-      }
-      if ($scope.operator == '-') {
-        return $scope.a - $scope.b;
-      }
-      if ($scope.operator == '*') {
-        return $scope.a * $scope.b;
-      }
-      if ($scope.operator == '/') {
-        return $scope.a / $scope.b;
-      }
+      return $scope.units;
     };
   }]
 );

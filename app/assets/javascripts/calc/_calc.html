@@ -1,13 +1,27 @@
 <h2>TDEE Calculator</h2>
+
+<div ng-model="units">
+  <input type="radio" ng-model="units" value="imperial">
+  <label for="imperial">Imperial (lbs)</label>
+
+  <input type="radio" ng-model="units" value="metric">
+  <label for="metric">Metric (kg)</label>
+</div>
 <p>
   Weight:
   <input type="number" ng-model="weight">
 </p>
-<p><input type="number" ng-model="b"></p>
-<p><select ng-model="operator">
-      <option>+</option>
-      <option>*</option>
-      <option>-</option>
-      <option>/</option>
-   </select></p>
+<p>
+  Body Fat Percentage:
+  <input type="number" ng-model="bfp">
+</p>
+<p>
+  Activity Level:
+  <select ng-model="operator">
+    <option>+</option>
+    <option>*</option>
+    <option>-</option>
+    <option>/</option>
+  </select>
+</p>
 <p>{{ result() }}</p>
