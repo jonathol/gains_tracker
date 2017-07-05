@@ -1,0 +1,7 @@
+.jumbotron {
+  background-image: url("http://res.cloudinary.com/jonathol/image/upload/v1499291261/weights_rwvpdi.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
