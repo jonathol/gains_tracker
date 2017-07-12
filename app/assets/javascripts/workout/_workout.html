@@ -1,0 +1,42 @@
+<div ng-repeat="workout in workouts">
+
+
+  <span style="font-size:20px; margin-left:10px;">
+
+    <span >
+      {{workout.workout}}
+    </span>
+  </span>
+
+</div>
+
+<form ng-submit="addWorkout()"
+  style="margin-top:30px;">
+  <h3>Add a new workout</h3>
+
+  <div class="form-group">
+    <input type="text"
+    class="form-control"
+    placeholder="Workout Name"
+    ng-model="workout"></input>
+  </div>
+  <div class="form-group">
+    <input type="text"
+    class="form-control"
+    placeholder="Notes"
+    ng-model="notes"></input>
+  </div>
+  <div class="form-group">
+    <input type="text"
+    class="form-control"
+    placeholder="Length"
+    ng-model="length"></input>
+  </div>
+  <div class="form-group">
+    <input type="text"
+    class="form-control"
+    placeholder="Notes"
+    ng-model="notes"></input>
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>

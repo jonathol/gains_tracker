@@ -36,6 +36,11 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
         url: '/calc',
         templateUrl: 'calc/_calc.html',
         controller: 'CalcCtrl'
+      })
+      .state('workout', {
+        url: '/workout',
+        templateUrl: 'workout/_workout.html',
+        controller: 'WorkoutCtrl'
       });
 
     $urlRouterProvider.otherwise('home');
