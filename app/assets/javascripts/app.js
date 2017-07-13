@@ -1,5 +1,11 @@
 angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
 .config([
+  '$qProvider',
+  function($qProvider) {
+     $qProvider.errorOnUnhandledRejections(false);
+  }
+])
+.config([
   '$stateProvider',
   '$urlRouterProvider',
 
@@ -9,7 +15,7 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: 'home/_home.html',        
+        templateUrl: 'home/_home.html',
       })
       .state('signin', {
         url: '/signin',

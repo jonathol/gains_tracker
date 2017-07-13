@@ -346,7 +346,7 @@ devise.provider('Auth', function AuthProvider() {
              *
              * @returns Boolean
              */
-            isAuthenticated: function(){
+            isAuthenticated: function(){              
                 return !!service._currentUser;
             }
         };
