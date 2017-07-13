@@ -1,16 +1,18 @@
 angular.module('gainsTracker')
-.controller('WorkoutCtrl', [
+.controller('WorkoutsCtrl', [
   '$scope',
-  function($scope) {
+  'workouts',
+  function($scope, workouts) {
+    $scope.workouts = workouts.workouts;
     $scope.addWorkout = function(){
-      if(!$scope.workout || $scope.workout === '') { return; }
-      workout.create({
-        workout: $scope.workout,
+      if(!$scope.name || $scope.name === '') { return; }
+      workouts.create({
+        name: $scope.name,
         date: $scope.date,
         notes: $scope.notes,
         length: $scope.length,
       });
-      $scope.workout = '';
+      $scope.name = '';
       $scope.date = '';
       $scope.notes = '';
       $scope.length = '';

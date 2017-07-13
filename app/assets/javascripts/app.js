@@ -9,8 +9,7 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: 'home/_home.html',
-        controller: 'MainCtrl'
+        templateUrl: 'home/_home.html',        
       })
       .state('signin', {
         url: '/signin',
@@ -37,10 +36,15 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
         templateUrl: 'calc/_calc.html',
         controller: 'CalcCtrl'
       })
-      .state('workout', {
-        url: '/workout',
-        templateUrl: 'workout/_workout.html',
-        controller: 'WorkoutCtrl'
+      .state('workouts', {
+        url: '/workouts',
+        templateUrl: 'workouts/_workouts.html',
+        controller: 'WorkoutsCtrl',
+        resolve: {
+          workoutPromise: ['workouts', function(workouts) {
+            return workouts.getAll();
+          }]
+        }
       });
 
     $urlRouterProvider.otherwise('home');
