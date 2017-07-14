@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h3>
+    <span>
+      {{workout.name}}
+    </span>
+  </h3>
+  <ul>
+    <li>{{workout.date}}</li>
+    <li>{{workout.length}}</li>
+    <li>{{workout.notes}}</li>
+  </ul>  
+</div>
+
+
+<form ng-submit="addComment()"
+  style="margin-top:30px;">
+  <h3>Add a new comment</h3>
+
+  <div class="form-group">
+    <input type="text"
+    class="form-control"
+    placeholder="Comment"
+    ng-model="body"></input>
+  </div>
+  <button type="submit" class="btn btn-primary">Post</button>
+</form>

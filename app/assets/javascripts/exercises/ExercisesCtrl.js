@@ -1,10 +1,11 @@
 angular.module('gainsTracker')
-.controller('WorkoutsCtrl', [
+.controller('ExercisesCtrl', [
   '$scope',
   'workouts',
+  'workout',
   'Auth',
-  function($scope, workouts, Auth) {
-    $scope.workouts = workouts.workouts;  
+  function($scope, workouts, workout, Auth) {
+    $scope.workout = workout;
 
     Auth.currentUser().then(function (user){
 

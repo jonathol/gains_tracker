@@ -10,8 +10,6 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
   '$urlRouterProvider',
 
   function($stateProvider, $urlRouterProvider) {
-
-
     $stateProvider
       .state('home', {
         url: '/home',
@@ -49,6 +47,16 @@ angular.module('gainsTracker', ['ui.router', 'templates', 'Devise'])
         resolve: {
           workoutPromise: ['workouts', function(workouts) {
             return workouts.getAll();
+          }]
+        }
+      })
+      .state('exercises', {
+        url: '/workouts/{id}',
+        templateUrl: 'exercises/_exercises.html',
+        controller: 'ExercisesCtrl',
+        resolve: {
+          workout: ['$stateParams', 'workouts', function($stateParams, workouts) {
+            return workouts.get($stateParams.id);
           }]
         }
       });
