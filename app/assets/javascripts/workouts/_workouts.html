@@ -1,10 +1,10 @@
-<div ng-repeat="workout in workouts">
+<div ng-repeat="workout in workouts | filter: filterByUser">
 
 
   <span style="font-size:20px; margin-left:10px;">
 
     <span >
-      {{workout.name}} posted by <a ng-href="#!/users/{{workout.user.username}}">{{workout.user.username}}</a>
+      {{workout.name}}
     </span>
   </span>
 

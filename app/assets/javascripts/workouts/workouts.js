@@ -18,6 +18,6 @@ angular.module('gainsTracker')
       return res.data;
     });
   };
-  
+
   return o;
 }])
