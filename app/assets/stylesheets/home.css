@@ -4,6 +4,7 @@
   background-size: cover;
   color: white;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  border-radius: 0;
 }
 
 ul.img-list {
@@ -38,7 +39,7 @@ span.text-content span {
 }
 
 
-ul.img-list li:hover span.text-content {
+ul.img-list span.text-content:hover {
   opacity: 1;
 }
 
