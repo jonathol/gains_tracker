@@ -4,7 +4,7 @@ angular.module('gainsTracker')
   'workouts',
   'Auth',
   function($scope, workouts, Auth) {
-    $scope.workouts = workouts.workouts;  
+    $scope.workouts = workouts.workouts;
 
     Auth.currentUser().then(function (user){
 
@@ -18,7 +18,7 @@ angular.module('gainsTracker')
       else {
         return false;
       }
-    }
+    }    
 
     $scope.addWorkout = function(){
       if(!$scope.name || $scope.name === '') { return; }

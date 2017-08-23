@@ -1,16 +1,20 @@
 angular.module('gainsTracker')
 .controller('ExercisesCtrl', [
   '$scope',
+  '$state',
   'workouts',
   'workout',
   'Auth',
-  function($scope, workouts, workout, Auth) {
+  function($scope, $state, workouts, workout, Auth) {
     $scope.workout = workout;
-
     Auth.currentUser().then(function (user){
 
       $scope.user = user;
     });
+    
+    if (!$scope.user || $scope.user.id !== workout.user_id) {
+      $state.go("home");
+    }
 
     $scope.filterByUser = function(el) {
       if($scope.user){
